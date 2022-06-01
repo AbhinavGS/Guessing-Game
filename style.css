@@ -1,0 +1,144 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  color: #ffff00;
+  background-color: black;
+  font-size: 1.2rem;
+}
+
+#logo {
+  margin-right: auto;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.main-screen {
+  margin-top: 1rem;
+  display: grid;
+  /* width: 100%; */
+  height: 85vh;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "a b c"
+    "d e f";
+}
+
+#one {
+  grid-area: a;
+}
+#d-level {
+  width: 75%;
+  margin: 3rem auto;
+  text-align: center;
+}
+#d-level-layout {
+  justify-content: center;
+}
+#d-level-layout > div {
+  width: 100%;
+}
+#two {
+  grid-area: b;
+}
+#secret-num {
+  height: 50%;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 4rem;
+}
+
+#three {
+  grid-area: c;
+}
+#scoreboard {
+  height: 60%;
+  margin: 3rem auto;
+  width: 75%;
+  text-align: center;
+}
+#board-title {
+  height: 30%;
+}
+#high-names {
+  height: 70%;
+}
+#high-names > div {
+  height: 33.33%;
+}
+#four {
+  grid-area: d;
+}
+#name {
+  width: 75%;
+  margin: 3rem auto;
+  text-align: center;
+}
+#five {
+  grid-area: e;
+}
+#msg-box {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  /* font-size: 1.5rem; */
+}
+#play-area {
+  margin: 30px auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+#play-area > button {
+  text-align: center;
+  margin-top: 50px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  font-size: 2rem;
+}
+#guess {
+  font-size: 5rem;
+  font-size: 3rem;
+}
+input {
+  text-align: center;
+  background-color: black;
+  color: antiquewhite;
+}
+#check-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #1919a6;
+  color: antiquewhite;
+}
+
+#six {
+  grid-area: f;
+}
+#score {
+  width: 75%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+/* when is width is less than 480px  */
+@media screen and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    margin: 0 auto;
+  }
+  .main-screen {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "b"
+      "e"
+      "f"
+      "d"
+      "a"
+      "c";
+  }
+}
